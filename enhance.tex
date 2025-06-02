@@ -1,0 +1,113 @@
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+%%% PAGE DIMENSIONS
+\usepackage[margin=71pt, headheight=20pt]{geometry} % to change the page dimensions
+\geometry{letterpaper} % or a4paper (Europe) or a5paper or....
+\usepackage{graphicx} % support the \includegraphics command and options
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\interfootnotelinepenalty=10000
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables	
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+
+%%% For table of content
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+
+%%% Math symbols
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{stmaryrd}
+\usepackage{esint}
+\usepackage{bbm}
+
+%%% Fractions
+\usepackage{xfrac}
+\usepackage{nicefrac}
+
+%%% Fonts for text and math
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{anyfontsize}
+
+%%% For enumeration
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+%%% For Hyperlinks inside the PDF file
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+%%Just for the strikethrough, use \sout
+\usepackage[normalem]{ulem}
+
+%%% For Tikz
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgf}
+\usetikzlibrary{external}
+\tikzexternalize % activate!
+
+%%% EQUATION Numbering Starts Fresh at each Section
+\def\theequation{\thesection.\arabic{equation}}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+%%% Theorems etc.
+\newtheorem{theorem}{Theorem}[section]
+%\renewcommand*{\thetheorem}{\Alph{theorem}}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[lemma]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{remark}[lemma]{Remark}
+
+%%% Macros definition
+\newcommand*{\NN}{\ensuremath{\mathbb{N}}}
+\newcommand*{\QQ}{\ensuremath{\mathbb{Q}}}
+\newcommand*{\TT}{\ensuremath{\mathbb{T}}}
+\newcommand*{\ZZ}{\ensuremath{\mathbb{Z}}}
+\newcommand*{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand*{\CC}{\ensuremath{\mathbb{C}}}
+\newcommand*{\DD}{\mathscr{D}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\les}{\lesssim}
+\newcommand{\OO}{\mathcal O}
+
+\DeclarePairedDelimiter{\snorm}{\llbracket}{\rrbracket}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\avg}{\langle}{\rangle}
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\tr}{tr}
+\renewcommand*{\div}{\operatorname{div}}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\osc}{osc}
+
+\renewcommand*{\tilde}{\widetilde}
+\let\tmpsum\sum
+\renewcommand{\sum}{\tmpsum\nolimits}
+\let\tmplimsup\limsup
+\renewcommand{\limsup}{\tmplimsup\nolimits}
+\let\tmpsup\sup
+\renewcommand{\sup}{\tmpsup\nolimits}
+
+%%% Define section title style
+\usepackage{titlesec}
+\newcommand{\addperiod}[1]{#1.}
+\titleformat{\section}{\centering\normalfont\Large}{\thesection.}{0.5em}{}
+\titleformat*{\subsection}{\bfseries}
+\titleformat{\subsubsection}[runin]{\normalfont\bfseries}{\thesubsubsection.}{0.5em}{\addperiod}
+\titleformat*{\subsubsection}{\normalfont\itshape}
+\titleformat*{\paragraph}{\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
